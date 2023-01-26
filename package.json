@@ -1,0 +1,48 @@
+{
+  "name": "onyx-liquidation-proxy",
+  "version": "0.1.0",
+  "description": "Smart contracts repository for Onyx Liquidation Proxy.",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile --show-stack-traces",
+    "console": "hardhat console",
+    "mainnet:deploy": "hardhat --network mainnet deploy",
+    "mainnet:update": "hardhat --network mainnet deploy --deploy-scripts ./deploy/update",
+    "mainnet:verify": "hardhat --network mainnet etherscan-verify --solc-input",
+    "mainnet:export": "hardhat --network mainnet export",
+    "goerli:deploy": "hardhat --network goerli deploy",
+    "goerli:update": "hardhat --network goerli deploy --deploy-scripts ./deploy/update",
+    "goerli:verify": "hardhat --network goerli etherscan-verify --solc-input",
+    "goerli:export": "hardhat --network goerli export",
+    "test": "hardhat test --show-stack-traces",
+    "prepublishOnly": "yarn run build && node scripts/prepublish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:onyx/onyx-liquidation-proxy.git"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.0.3"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.0.0",
+    "@openzeppelin/contracts-upgradeable": "^4.1.0",
+    "@types/mocha": "^8.2.1",
+    "@uniswap/sdk": "^3.0.3",
+    "chai": "^4.3.4",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.1.0",
+    "hardhat": "^2.2.1",
+    "hardhat-deploy": "0.8.0-next.4",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7",
+    "hardhat-gas-reporter": "^1.0.4",
+    "openzeppelin-solidity": "^3.3.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "author": "Onyx",
+  "license": "MIT"
+}
